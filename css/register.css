@@ -1,0 +1,127 @@
+/* Registration page layout */
+main {
+    max-width: 520px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+/* Page heading */
+main h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #243447;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+/* Registration form */
+main form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Field labels */
+main form label {
+    margin-bottom: 2px;
+    color: #243447;
+    font-weight: 600;
+}
+
+/* Text, email and password inputs */
+main form input[type="text"],
+main form input[type="email"],
+main form input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #243447;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Focus state */
+main form input:focus {
+    outline: none;
+    border-color: #40566e;
+    box-shadow: 0 0 0 3px rgba(64, 86, 110, 0.15);
+}
+
+/* Password visibility buttons */
+main form button[type="button"] {
+    align-self: flex-start;
+    padding: 7px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    background-color: #f7f9fb;
+    color: #243447;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main form button[type="button"]:hover {
+    background-color: #e8edf2;
+}
+
+/* Create Account button */
+main form button[type="submit"] {
+    width: 100%;
+    margin-top: 12px;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    background-color: #243447;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main form button[type="submit"]:hover {
+    background-color: #40566e;
+}
+
+/* Existing account prompt */
+main > p {
+    margin-top: 24px;
+    margin-bottom: 0;
+    color: #475569;
+    text-align: center;
+}
+
+main > p a {
+    color: #245b8f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main > p a:hover {
+    text-decoration: underline;
+}
+
+/* Registration messages */
+main div[role="alert"] {
+    box-sizing: border-box;
+    width: 100%;
+    line-height: 1.5;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    main {
+        margin: 24px 16px;
+        padding: 22px;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+}

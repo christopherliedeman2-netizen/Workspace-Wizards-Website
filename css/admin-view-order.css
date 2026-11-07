@@ -1,0 +1,148 @@
+/* Admin View Order page */
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(36, 52, 71, 0.08);
+}
+
+main > h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #243447;
+    font-size: 1.7rem;
+}
+
+/* Information cards */
+
+main .product-card {
+    margin-bottom: 25px;
+    padding: 24px;
+    background-color: #f7f9fb;
+    border: 1px solid #dce3ea;
+    border-left: 5px solid #40566e;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(36, 52, 71, 0.05);
+}
+
+main .product-card h3 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dce3ea;
+    color: #243447;
+    font-size: 1.25rem;
+}
+
+main .product-card p {
+    margin: 12px 0;
+    color: #405064;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+main .product-card p strong {
+    display: inline-block;
+    min-width: 165px;
+    color: #243447;
+}
+
+/* Delivery address */
+
+main .product-card h3 + p {
+    line-height: 1.8;
+    white-space: normal;
+}
+
+/* Items ordered */
+
+main .product-card > div {
+    padding: 16px 0 !important;
+    border-bottom: 1px solid #dce3ea !important;
+}
+
+main .product-card > div:last-child {
+    border-bottom: none !important;
+}
+
+main .product-card h4 {
+    margin: 0 0 12px;
+    color: #243447;
+    font-size: 1.1rem;
+}
+
+main .product-card > div p {
+    margin: 8px 0;
+}
+
+/* Order total card */
+
+main .product-card:last-of-type h3 {
+    margin: 0;
+    padding: 0;
+    border-bottom: none;
+    font-size: 1.5rem;
+}
+
+/* Back link */
+
+main > p:last-child {
+    margin-top: 25px;
+}
+
+main > p:last-child a {
+    display: inline-block;
+    padding: 11px 18px;
+    background-color: #243447;
+    border-radius: 6px;
+    color: #ffffff;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+main > p:last-child a:hover {
+    background-color: #40566e;
+}
+
+main > p:last-child a:focus-visible {
+    outline: 3px solid #7da9d4;
+    outline-offset: 3px;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 20px auto;
+        padding: 16px;
+    }
+
+    main > h2 {
+        font-size: 1.4rem;
+    }
+
+    main .product-card {
+        padding: 17px;
+    }
+
+    main .product-card h3 {
+        font-size: 1.15rem;
+    }
+
+    main .product-card p strong {
+        display: block;
+        min-width: 0;
+        margin-bottom: 3px;
+    }
+
+    main .product-card:last-of-type h3 {
+        font-size: 1.3rem;
+    }
+}

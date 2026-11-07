@@ -1,0 +1,276 @@
+/* Admin product management layout */
+main {
+    max-width: 1250px;
+    margin: 35px auto;
+    padding: 30px;
+}
+
+/* Section headings */
+main h2 {
+    margin: 0 0 22px;
+    color: #243447;
+    font-size: 1.7rem;
+}
+
+main h2:not(:first-child) {
+    margin-top: 35px;
+}
+
+/* Add-product form */
+main form.product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    max-width: 700px;
+    box-sizing: border-box;
+    margin: 0 0 30px;
+    padding: 28px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Form labels */
+main form label {
+    margin-top: 4px;
+    color: #243447;
+    font-weight: 600;
+}
+
+/* Form fields */
+main form input[type="text"],
+main form input[type="number"],
+main form input[type="search"],
+main form textarea,
+main form select {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #243447;
+    font: inherit;
+}
+
+/* Focus states */
+main form input:focus,
+main form textarea:focus,
+main form select:focus {
+    outline: none;
+    border-color: #40566e;
+    box-shadow: 0 0 0 3px rgba(64, 86, 110, 0.14);
+}
+
+/* Description field */
+main form textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* General admin action buttons */
+main form button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #243447;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+main form button:hover {
+    background-color: #40566e;
+}
+
+/* Add-product button */
+main form.product-card button[type="submit"] {
+    margin-top: 12px;
+    padding: 13px;
+    font-size: 1rem;
+}
+
+/* Search and visibility filter form */
+main > form:not(.product-card) {
+    display: grid;
+    grid-template-columns: minmax(180px, 2fr) minmax(160px, 1fr) auto;
+    align-items: end;
+    gap: 12px;
+    margin: 0 0 25px;
+    padding: 22px;
+    background-color: #f7f9fb;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+/* Filter labels */
+main > form:not(.product-card) label {
+    margin: 0;
+}
+
+/* Filter controls */
+main > form:not(.product-card) input,
+main > form:not(.product-card) select {
+    min-width: 0;
+}
+
+/* Filter action button */
+main > form:not(.product-card) button {
+    min-height: 43px;
+}
+
+/* Clear filters link */
+main > form:not(.product-card) a {
+    grid-column: 1 / -1;
+    width: fit-content;
+    color: #245b8f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main > form:not(.product-card) a:hover {
+    text-decoration: underline;
+}
+
+/* Existing product cards */
+main .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* Individual product card */
+main .product-grid .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 0;
+    padding: 23px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    overflow-wrap: anywhere;
+}
+
+/* Product title */
+main .product-grid .product-card h3 {
+    margin: 0 0 14px;
+    color: #243447;
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* Product details */
+main .product-grid .product-card p {
+    margin: 8px 0;
+    color: #475569;
+    line-height: 1.5;
+}
+
+/* Product price */
+main .product-grid .product-card .price {
+    margin: 8px 0 12px;
+    color: #245b8f;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Visibility and delete forms inside cards */
+main .product-grid .product-card form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+/* Hide/show action */
+main .product-grid .product-card button[name="toggle_visibility"] {
+    background-color: #40566e;
+}
+
+main .product-grid .product-card button[name="toggle_visibility"]:hover {
+    background-color: #243447;
+}
+
+/* Delete action */
+main .product-grid .product-card button[name="delete_product"] {
+    background-color: #b91c1c;
+}
+
+main .product-grid .product-card button[name="delete_product"]:hover {
+    background-color: #991b1b;
+}
+
+/* Edit product link */
+main .product-grid .product-card a {
+    display: inline-block;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background-color: #e8edf2;
+    color: #243447;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+main .product-grid .product-card a:hover {
+    background-color: #d5dee7;
+}
+
+/* Tablet */
+@media (max-width: 950px) {
+    main {
+        padding: 22px;
+    }
+
+    main .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    main > form:not(.product-card) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main > form:not(.product-card) button {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    main {
+        margin: 20px auto;
+        padding: 16px;
+    }
+
+    main h2 {
+        font-size: 1.45rem;
+    }
+
+    main form.product-card {
+        padding: 20px;
+    }
+
+    main .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    main > form:not(.product-card) {
+        grid-template-columns: 1fr;
+        padding: 17px;
+    }
+
+    main > form:not(.product-card) button,
+    main > form:not(.product-card) a {
+        grid-column: auto;
+    }
+}

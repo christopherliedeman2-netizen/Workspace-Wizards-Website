@@ -1,0 +1,207 @@
+/* =================================
+   WORKSPACE WIZARDS - PRODUCT PAGE
+   ================================= */
+
+main {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: 32px 0 48px;
+}
+
+/* Back to catalogue link */
+main > a:first-child {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #245b8f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main > a:first-child:hover {
+    text-decoration: underline;
+}
+
+/* Product details layout */
+.product-details {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 44px;
+    align-items: start;
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #e1e6eb;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 5%);
+}
+
+/* Main product image */
+.product-details .product-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 380px;
+    padding: 16px;
+    background: #f7f8fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-details .product-image img {
+    display: block;
+    width: 100%;
+    max-height: 460px;
+    object-fit: contain;
+}
+
+.product-details .product-image p {
+    color: #687787;
+}
+
+/* Product information */
+.product-information {
+    min-width: 0;
+}
+
+.product-information > p:first-child {
+    margin-top: 0;
+    color: #687787;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.product-information h2 {
+    margin: 12px 0 18px;
+    color: #243447;
+    font-size: clamp(1.7rem, 3vw, 2.3rem);
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+}
+
+.product-information > p {
+    color: #526171;
+    line-height: 1.8;
+}
+
+.product-information h3 {
+    margin: 24px 0;
+    color: #243447;
+    font-size: 1.8rem;
+}
+
+/* Quantity and purchase controls */
+.product-information form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.product-information form label {
+    color: #243447;
+    font-weight: 600;
+}
+
+.product-information form input[type="number"] {
+    width: 90px;
+    padding: 11px;
+    border: 1px solid #cbd3dc;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.product-information form input[type="number"]:focus {
+    outline: 2px solid #8aaed0;
+    outline-offset: 1px;
+}
+
+.product-information form button,
+.product-information > button {
+    padding: 12px 20px;
+    border: 1px solid #243447;
+    border-radius: 6px;
+    background: #243447;
+    color: #ffffff;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.product-information form button:hover {
+    background: #40566e;
+}
+
+.product-information > button:disabled {
+    background: #e1e6eb;
+    border-color: #e1e6eb;
+    color: #687787;
+    cursor: not-allowed;
+}
+
+/* Mobile and tablet layout */
+@media (max-width: 750px) {
+    main {
+        width: 94%;
+        padding-top: 24px;
+    }
+
+    .product-details {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 20px;
+    }
+
+    .product-details .product-image {
+        min-height: 260px;
+    }
+
+    .product-details .product-image img {
+        max-height: 340px;
+    }
+}
+
+@media (max-width: 420px) {
+    .product-details {
+        padding: 16px;
+    }
+
+    .product-information form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .product-information form input[type="number"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .product-information form button {
+        width: 100%;
+    }
+}
+
+
+/* Login to buy button */
+.login-to-buy-button {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 20px;
+    background-color: #243447;
+    color: #ffffff;
+    border: 1px solid #243447;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.login-to-buy-button:hover {
+    background-color: #40566e;
+    border-color: #40566e;
+}
+
+

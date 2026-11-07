@@ -1,0 +1,327 @@
+
+/* Admin dashboard layout */
+main {
+    max-width: 1200px;
+    margin: 35px auto;
+    padding: 30px;
+}
+
+/* Dashboard heading */
+main h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #243447;
+    font-size: 1.9rem;
+}
+
+/* Welcome message */
+main > p {
+    margin-bottom: 30px;
+    color: #475569;
+    font-size: 1.05rem;
+}
+
+/* Dashboard cards grid */
+main .product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 25px;
+}
+
+/* Individual dashboard cards */
+main .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    min-width: 0;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+main .product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.09);
+}
+
+/* Card titles */
+main .product-card h3 {
+    margin: 0 0 18px;
+    color: #243447;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+/* Statistics */
+main .product-card .price {
+    margin: 0 0 22px;
+    color: #245b8f;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* Dashboard card links */
+main .product-card a {
+    display: inline-block;
+    margin-top: auto;
+    padding: 10px 15px;
+    border-radius: 6px;
+    background-color: #243447;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+main .product-card a:hover {
+    background-color: #40566e;
+}
+
+/* Tablet layout */
+@media (max-width: 900px) {
+    main .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    main {
+        padding: 24px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 560px) {
+    main {
+        margin: 20px auto;
+        padding: 16px;
+    }
+
+    main h2 {
+        font-size: 1.55rem;
+    }
+
+    main .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    main .product-card {
+        padding: 22px;
+    }
+}
+
+
+/* Admin dashboard statistics */
+
+.admin-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    margin-top: 30px;
+}
+
+.admin-dashboard-grid .product-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 24px;
+    border-radius: 12px;
+    border-left: 5px solid #2563EB;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.admin-dashboard-grid .product-card h3 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+
+.admin-dashboard-grid .product-card .price {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1E3A8A;
+}
+
+.admin-dashboard-grid .product-card a {
+    margin-top: auto;
+}
+
+@media (max-width: 900px) {
+    .admin-dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    .admin-dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .admin-dashboard-grid .product-card {
+        padding: 20px;
+    }
+}
+
+
+
+
+/* Recent orders section */
+
+.admin-recent-orders {
+    margin-top: 40px;
+}
+
+.admin-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.admin-section-heading h2 {
+    margin: 0;
+}
+
+.admin-recent-orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.admin-recent-order {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, auto) auto;
+    align-items: center;
+    gap: 24px;
+    padding: 20px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.admin-recent-order h3 {
+    margin: 0 0 8px;
+}
+
+.admin-recent-order p {
+    margin: 5px 0;
+}
+
+.admin-recent-order-date {
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+.admin-recent-order-total {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.admin-recent-order-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+.admin-order-badge {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.admin-order-badge.payment-paid,
+.admin-order-badge.status-completed {
+    color: #065F46;
+    background: #D1FAE5;
+}
+
+.admin-order-badge.payment-pending,
+.admin-order-badge.status-pending,
+.admin-order-badge.status-processing {
+    color: #92400E;
+    background: #FEF3C7;
+}
+
+.admin-order-badge.status-shipped {
+    color: #1D4ED8;
+    background: #DBEAFE;
+}
+
+.admin-order-badge.payment-cancelled,
+.admin-order-badge.payment-failed,
+.admin-order-badge.status-cancelled {
+    color: #991B1B;
+    background: #FEE2E2;
+}
+
+.admin-recent-order-action a {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.admin-no-recent-orders {
+    padding: 24px;
+    border: 1px solid #E5E7EB;
+    border-radius: 10px;
+    color: #6B7280;
+}
+
+@media (max-width: 750px) {
+    .admin-recent-order {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .admin-recent-order-action a {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 450px) {
+    .admin-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* Recent order action buttons */
+
+.admin-recent-order-action a {
+    display: inline-block;
+    padding: 10px 16px;
+    background-color: #2563EB;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+    border-radius: 6px;
+    border: 1px solid #2563EB;
+    white-space: nowrap;
+    transition: background-color 0.2s ease,
+                border-color 0.2s ease;
+}
+
+.admin-recent-order-action a:hover {
+    background-color: #1D4ED8;
+    border-color: #1D4ED8;
+}
+
+.admin-recent-order-action a:focus-visible {
+    outline: 3px solid #93C5FD;
+    outline-offset: 3px;
+}

@@ -1,0 +1,215 @@
+/* Shopping Cart Page */
+
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+main h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    color: #243447;
+    font-size: 28px;
+}
+
+/* Status and empty cart messages */
+
+main p[role="status"] {
+    padding: 12px 16px;
+    background-color: #eef5f9;
+    border-left: 4px solid #40566e;
+    border-radius: 4px;
+}
+
+main > p:not(.price) {
+    line-height: 1.6;
+}
+
+/* Cart table */
+
+main table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+main thead {
+    background-color: #243447;
+    color: #ffffff;
+}
+
+main th,
+main td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #e1e5e9;
+    vertical-align: middle;
+}
+
+main th {
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+main tbody tr:nth-child(even) {
+    background-color: #f7f9fb;
+}
+
+main tbody tr:hover {
+    background-color: #eef3f7;
+}
+
+/* Quantity input */
+
+main input[type="number"] {
+    width: 75px;
+    padding: 9px;
+    border: 1px solid #cbd3dc;
+    border-radius: 5px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+main input[type="number"]:focus {
+    outline: 2px solid #7898b5;
+    outline-offset: 1px;
+}
+
+/* Buttons and links */
+
+main button {
+    padding: 10px 16px;
+    background-color: #243447;
+    color: #ffffff;
+    border: 1px solid #243447;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+main button:hover {
+    background-color: #40566e;
+    border-color: #40566e;
+}
+
+main a {
+    display: inline-block;
+    margin: 8px 10px 8px 0;
+    color: #245b8f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main a:hover {
+    text-decoration: underline;
+}
+
+/* Remove button */
+
+main td button {
+    background-color: #a83232;
+    border-color: #a83232;
+    padding: 8px 12px;
+}
+
+main td button:hover {
+    background-color: #812626;
+    border-color: #812626;
+}
+
+/* Cart total */
+
+main .price {
+    margin: 25px 0;
+    color: #243447;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: right;
+}
+
+/* Empty cart link */
+
+main > a {
+    margin-top: 10px;
+}
+
+/* Responsive layout */
+
+@media (max-width: 768px) {
+    main {
+        margin: 20px 12px;
+        padding: 20px 15px;
+    }
+
+    main h2 {
+        font-size: 24px;
+    }
+
+    main table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    main th,
+    main td {
+        padding: 12px 10px;
+    }
+
+    main .price {
+        font-size: 20px;
+    }
+
+    main button {
+        padding: 9px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 16px 10px;
+    }
+
+    main h2 {
+        font-size: 22px;
+    }
+
+    main a {
+        margin-right: 8px;
+    }
+}
+
+
+
+
+/* Continue Shopping and Proceed to Checkout buttons */
+
+main form > a[href="products.php"],
+main form > a[href="checkout.php"] {
+    display: inline-block;
+    margin: 8px 10px 8px 0;
+    padding: 11px 18px;
+    background-color: #243447;
+    color: #ffffff;
+    border: 1px solid #243447;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+main form > a[href="products.php"]:hover,
+main form > a[href="checkout.php"]:hover {
+    background-color: #40566e;
+    border-color: #40566e;
+    text-decoration: none;
+}

@@ -1,0 +1,209 @@
+/* Shipping & Delivery page */
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(36, 52, 71, 0.08);
+}
+
+main h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #243447;
+    font-size: 1.7rem;
+}
+
+main > p {
+    color: #526174;
+    line-height: 1.6;
+}
+
+/* Individual order cards */
+
+main .product-card {
+    margin: 25px 0;
+    padding: 24px;
+    background-color: #f7f9fb;
+    border: 1px solid #dce3ea;
+    border-left: 5px solid #40566e;
+    border-radius: 8px;
+    box-shadow: 0 2px 7px rgba(36, 52, 71, 0.06);
+}
+
+main .product-card h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dce3ea;
+    color: #243447;
+    font-size: 1.3rem;
+}
+
+main .product-card p {
+    margin: 12px 0;
+    color: #405064;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+main .product-card strong {
+    display: inline-block;
+    min-width: 145px;
+    color: #243447;
+}
+
+main .product-card a {
+    color: #245b8f;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main .product-card a:hover {
+    color: #173f66;
+    text-decoration: underline;
+}
+
+/* View Order Details link */
+
+main .product-card p a {
+    display: inline-block;
+    margin-top: 5px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border: 1px solid #245b8f;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+main .product-card p a:hover {
+    background-color: #edf4fa;
+    text-decoration: none;
+}
+
+/* Shipping and delivery action buttons */
+
+main .product-card form {
+    margin-top: 20px;
+    padding-top: 18px;
+    border-top: 1px solid #dce3ea;
+}
+
+main .product-card form button {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    background-color: #243447;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+main .product-card form button:hover {
+    background-color: #40566e;
+}
+
+main .product-card form button:focus-visible,
+main .product-card a:focus-visible {
+    outline: 3px solid #7da9d4;
+    outline-offset: 3px;
+}
+
+/* Success and error messages */
+
+main > p[style*="green"] {
+    padding: 12px 15px;
+    border: 1px solid #a7d7b5;
+    border-radius: 6px;
+    background-color: #edf8f0;
+    color: #216638 !important;
+}
+
+main > p[style*="red"] {
+    padding: 12px 15px;
+    border: 1px solid #e7b2b2;
+    border-radius: 6px;
+    background-color: #fff0f0;
+    color: #a12626 !important;
+}
+
+/* Mobile layout */
+
+@media (max-width: 600px) {
+    main {
+        width: 95%;
+        margin: 20px auto;
+        padding: 16px;
+    }
+
+    main h2 {
+        font-size: 1.4rem;
+    }
+
+    main .product-card {
+        padding: 17px;
+    }
+
+    main .product-card h3 {
+        font-size: 1.15rem;
+    }
+
+    main .product-card strong {
+        display: block;
+        min-width: 0;
+        margin-bottom: 2px;
+    }
+
+    main .product-card form button {
+        width: 100%;
+    }
+}
+
+
+/* Order fulfilment stage colours */
+
+.shipping-order {
+    border-left: 6px solid #D97706;
+    background-color: #FFFBEB;
+}
+
+.shipping-order.status-processing {
+    border-left-color: #D97706;
+    background-color: #FFFBEB;
+}
+
+.shipping-order.status-shipped {
+    border-left-color: #2563EB;
+    background-color: #EFF6FF;
+}
+
+.shipping-order .status-badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.shipping-order .status-badge.processing {
+    color: #92400E;
+    background-color: #FEF3C7;
+}
+
+.shipping-order .status-badge.shipped {
+    color: #1D4ED8;
+    background-color: #DBEAFE;
+}
+
+.shipping-order .status-badge.completed {
+    color: #065F46;
+    background-color: #D1FAE5;
+}
